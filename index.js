@@ -27,7 +27,7 @@ app.get('todos/:id', (req,res) =>  {
 
 //POST /'todos' New Todo
 app.post('/todos', (req,res) => {
-    const newItem = {id: nextID++, item: req.body.item };
+    const newItem = {id: nextID--, item: req.body.item };
     todos.push(newItem);
     res.status(201).json(newItem);
 });
