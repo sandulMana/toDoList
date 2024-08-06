@@ -7,7 +7,7 @@ app.use(express.json())
 let todos = [];
 
 //Initial Todo ID
-let nextID = 1;
+let nextID = 0;
 
 // GET /todos - Retrieve all todo items 
 app.get('/todos', (req,res) =>  {
